@@ -19,7 +19,7 @@
 ## 🌟 Highlights
 
 * **Complete Pool Chemistry Monitoring**: Live tracking of **pH**, **ORP / Redox (mV)**, and **Water Temperature**.
-* **ABOT Disinfection Telemetry**: Live **$O_2$ Hydrolysis** current & voltage, and **Copper Ionization** current & voltage.
+* **ABOT Disinfection Telemetry**: Live **O₂ Hydrolysis** current & voltage, and **Copper Ionization** current & voltage.
 * **Full Relay & Equipment Control**:
   * 🔄 **Filtration Pump** switch & running status
   * 🔥 **Heater Relay** switch & heating demand status
@@ -93,8 +93,8 @@
 | `sensor` | `water_temperature` | Pool water temperature (°C) |
 | `sensor` | `ph` | Pool water pH value |
 | `sensor` | `orp_redox` | Redox potential (mV) |
-| `sensor` | `o2_current` | Hydrolysis $O_2$ current (A) |
-| `sensor` | `o2_voltage` | Hydrolysis $O_2$ voltage (V) |
+| `sensor` | `o2_current` | Hydrolysis O₂ current (A) |
+| `sensor` | `o2_voltage` | Hydrolysis O₂ voltage (V) |
 | `sensor` | `ion_current` | Ionization copper current (mA) |
 | `sensor` | `ion_voltage` | Ionization copper voltage (V) |
 | `sensor` | `target_water_temperature` | Target pool setpoint temperature (°C) |
@@ -111,7 +111,7 @@
 | `binary_sensor` | `pump_running` | Filtration pump running state |
 | `binary_sensor` | `heating_active` | Heating demand active state |
 | `binary_sensor` | `water_flow` | Flow switch detection |
-| `binary_sensor` | `oxidation_active` | $O_2$ oxidation running |
+| `binary_sensor` | `oxidation_active` | O₂ oxidation running |
 | `binary_sensor` | `ionization_active` | Copper ionization running |
 
 ---
