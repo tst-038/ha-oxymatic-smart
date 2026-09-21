@@ -1,0 +1,106 @@
+{
+  "title": "OxyMatic",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to OxyMatic",
+        "description": "Enter your OxyMatic app credentials.",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Login failed — check your username and password."
+    },
+    "abort": {
+      "already_configured": "This account is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "water_temp": {
+        "name": "Water temperature"
+      },
+      "water_temp_target": {
+        "name": "Target water temperature"
+      },
+      "active_program": {
+        "name": "Active program"
+      },
+      "operating_mode": {
+        "name": "Operating mode"
+      },
+      "last_read": {
+        "name": "Last read"
+      },
+      "status_message": {
+        "name": "Status message"
+      },
+      "ph": {
+        "name": "pH"
+      },
+      "orp": {
+        "name": "ORP (Redox)"
+      },
+      "oxy_current": {
+        "name": "O₂ current"
+      },
+      "oxy_voltage": {
+        "name": "O₂ voltage"
+      },
+      "ion_current": {
+        "name": "Ion current"
+      },
+      "ion_voltage": {
+        "name": "Ion voltage"
+      },
+      "copper": {
+        "name": "Copper"
+      },
+      "chlorine": {
+        "name": "Chlorine"
+      }
+    },
+    "light": {
+      "light": {
+        "name": "Pool lights"
+      }
+    },
+    "switch": {
+      "pump": {
+        "name": "Filtration pump"
+      },
+      "heat": {
+        "name": "Pool heater"
+      },
+      "aux1": {
+        "name": "Auxiliary 1"
+      },
+      "aux2": {
+        "name": "Auxiliary 2"
+      }
+    },
+    "binary_sensor": {
+      "cloud_connection": {
+        "name": "Cloud connection"
+      },
+      "pump_running": {
+        "name": "Filtration pump running"
+      },
+      "heating_active": {
+        "name": "Heating active"
+      },
+      "water_flow": {
+        "name": "Water flow"
+      },
+      "oxidation_active": {
+        "name": "Oxidation active"
+      },
+      "ionization_active": {
+        "name": "Ionization active"
+      }
+    }
+  }
+}
