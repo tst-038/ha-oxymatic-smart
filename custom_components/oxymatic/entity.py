@@ -37,13 +37,8 @@ class OxyMaticEntity(CoordinatorEntity[OxyMaticCoordinator]):
     @property
     def available(self) -> bool:
         """Return True if entity is available."""
-        if not self.coordinator.last_update_success:
-            return False
-        if not self.coordinator.data or self._device_id not in self.coordinator.data:
-            return False
-        status = self.coordinator.data[self._device_id]
-        if status.error_message:
-            msg = status.error_message.lower()
-            if "connection error" in msg or "check device connection" in msg:
-                return False
-        return True
+        return (
+            self.coordinator.last_update_success
+            and self.coordinator.data is not None
+            and self._device_id in self.coordinator.data
+        )

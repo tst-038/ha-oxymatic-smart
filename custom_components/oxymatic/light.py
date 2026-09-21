@@ -2,7 +2,7 @@
 
 import logging
 
-from homeassistant.components.light import LightEntity
+from homeassistant.components.light import ColorMode, LightEntity
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
@@ -31,6 +31,8 @@ class OxyMaticLight(OxyMaticEntity, LightEntity):
     """Light entity for the OxyMatic pool light."""
 
     _attr_translation_key = "light"
+    _attr_supported_color_modes = {ColorMode.ONOFF}
+    _attr_color_mode = ColorMode.ONOFF
 
     def __init__(self, coordinator, device_id: int) -> None:
         """Initialise the light."""
