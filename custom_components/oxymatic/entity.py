@@ -21,6 +21,7 @@ class OxyMaticEntity(CoordinatorEntity[OxyMaticCoordinator]):
         """Initialise the entity."""
         super().__init__(coordinator)
         self._device_id = device_id
+        self._entity_key = entity_key
         self._attr_unique_id = f"{device_id}_{entity_key}"
 
         # Build device info from the first data point
@@ -37,8 +38,21 @@ class OxyMaticEntity(CoordinatorEntity[OxyMaticCoordinator]):
     @property
     def available(self) -> bool:
         """Return True if entity is available."""
-        return (
+        if not (
             self.coordinator.last_update_success
             and self.coordinator.data is not None
             and self._device_id in self.coordinator.data
-        )
+        ):
+            return False
+
+        # Diagnostic/connection entities stay available to report disconnection status & timestamps
+        if self._entity_key in (
+            "cloud_connection",
+            "status_message",
+            "last_read",
+        ):
+            return True
+
+        # Telemetry and control entities are unavailable when the physical controller is disconnected
+        status = self.coordinator.data[self._device_id]
+        return bool(status.is_connected)
