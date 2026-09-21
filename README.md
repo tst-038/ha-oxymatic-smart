@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" alt="OxyMatic Smart Logo" width="480">
+  <img src="https://raw.githubusercontent.com/tst-038/ha-oxymatic-smart/main/images/logo.png" alt="OxyMatic Smart Logo" width="480">
 </p>
 
 <h1 align="center">OxyMatic Smart for Home Assistant</h1>
